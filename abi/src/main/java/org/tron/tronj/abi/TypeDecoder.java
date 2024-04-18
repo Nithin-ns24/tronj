@@ -34,6 +34,9 @@ import java.util.function.BiFunction;
  */
 public class TypeDecoder {
 
+private TypeDecoder() {
+}
+
     static final int MAX_BYTE_LENGTH_FOR_HEX_STRING = Type.MAX_BYTE_LENGTH << 1;
 
     public static Type instantiateType(String solidityType, Object value)
