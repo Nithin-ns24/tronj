@@ -172,7 +172,7 @@ public abstract class TypeReference<T extends org.tron.tronj.abi.datatypes.Type>
         while (lastReadStringPosition < len) {
             String arraySize = nextSquareBrackets.group(1);
             final TypeReference baseTr = arrayWrappedType;
-            if (arraySize == null || arraySize.equals("")) {
+            if (arraySize == null || "".equals(arraySize)) {
                 arrayWrappedType =
                         new TypeReference<DynamicArray>(indexed) {
                             @Override
